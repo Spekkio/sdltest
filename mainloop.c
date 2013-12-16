@@ -5,6 +5,7 @@
 #include "ode.h"
 
 int mousex,mousey,forward,strafe;
+int jump;
 
 void mainLoop(void)
 {
@@ -18,6 +19,7 @@ void mainLoop(void)
   frames=0;
   forward=0;
   strafe=0;
+  jump=0;
 
   while(running)
     {
@@ -59,6 +61,10 @@ void mainLoop(void)
 		  running=0;
 		  break;
 
+		case SDLK_SPACE:
+		  jump=1;
+		  break;
+
 		case SDLK_w:
 		  forward=1;
 		  break;
@@ -80,6 +86,9 @@ void mainLoop(void)
 	    case SDL_KEYUP:
 	      switch(event.key.keysym.sym)
 		{
+		case SDLK_SPACE:
+		  jump=0;
+		  break;
 		case SDLK_s:
 		case SDLK_w:
 		  forward=0;
