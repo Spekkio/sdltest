@@ -34,9 +34,18 @@ int main(int argc, char ** argv)
       return 0;
     }
 
-  SDL_Init(SDL_INIT_EVERYTHING);
+  if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
+    {
+      printf("Error: SDL_Init(SDL_INIT_EVERYTHING) < 0\n");
+      return -1;
+    }
+
   screen=SDL_SetVideoMode(800,600,32,SDL_SWSURFACE|SDL_OPENGL);
-  screen=screen;
+  if(screen == 0)
+    {
+      printf("error: SDL_SetVideoMode() == 0\n");
+      return -1;
+    }
 
   mousey=mousex=0;
 
