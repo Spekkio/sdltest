@@ -8,6 +8,8 @@
 #include "ode.h"
 #include "mainloop.h"
 
+const char * oglVersion;
+
 GLuint sphere, tfloor;
 
 float xd, yd;
@@ -66,12 +68,21 @@ void display(void)
 
 }
 
+void getGLVersion()
+{
+  /*const GLubyte* sGLVersion;*/
+  oglVersion =  (char*)glGetString(GL_VERSION);
+  printf("OpenGL Version %s\n",oglVersion);
+}
+
 void initGL(void)
 {
   float aspect_ratio;
 
   x_position=y_position=0.0;
   yd=xd=0.0;
+
+  getGLVersion();
 
   /*Settings*/
   glShadeModel(GL_SMOOTH);
@@ -109,5 +120,4 @@ void initGL(void)
   glNewList(tfloor, GL_COMPILE);
   makeFloor(2.0);
   glEndList();
-
 }
