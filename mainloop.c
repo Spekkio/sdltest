@@ -3,9 +3,12 @@
 
 #include "gl.h"
 #include "ode.h"
+#include "mainloop.h"
 
 int mousex,mousey,forward,strafe;
 int jump;
+
+int move_flags;
 
 void mainLoop(void)
 {
@@ -20,6 +23,8 @@ void mainLoop(void)
   forward=0;
   strafe=0;
   jump=0;
+
+  move_flags=0;
 
   while(running)
     {
@@ -52,6 +57,7 @@ void mainLoop(void)
 	      mousex = event.motion.xrel;
 	      mousey = event.motion.yrel;
 	      SDL_WarpMouse(400, 300);
+	      move_flags|=MOUSE;
 	      break;
 
 	    case SDL_KEYDOWN:
@@ -62,21 +68,21 @@ void mainLoop(void)
 		  break;
 
 		case SDLK_SPACE:
-		  jump=1;
+		  move_flags|=JUMP;
 		  break;
 
 		case SDLK_w:
-		  forward=1;
+		  move_flags|=FORWARD;
 		  break;
 		case SDLK_s:
-		  forward=-1;
+		  move_flags|=BACK;
 		  break;
 
 		case SDLK_d:
-		  strafe=1;
+		  move_flags|=RIGHT;
 		  break;
 		case SDLK_a:
-		  strafe=-1;
+		  move_flags|=LEFT;
 		  break;
 
 		default:break;
@@ -87,15 +93,19 @@ void mainLoop(void)
 	      switch(event.key.keysym.sym)
 		{
 		case SDLK_SPACE:
-		  jump=0;
+		  move_flags&=0xFFFFFFFF^(JUMP);
 		  break;
 		case SDLK_s:
+		  move_flags&=0xFFFFFFFF^(BACK);
+		  break;
 		case SDLK_w:
-		  forward=0;
+		  move_flags&=0xFFFFFFFF^(FORWARD);
 		  break;
 		case SDLK_a:
+		  move_flags&=0xFFFFFFFF^(LEFT);
+		  break;
 		case SDLK_d:
-		  strafe=0;
+		  move_flags&=0xFFFFFFFF^(RIGHT);
 		  break;
 		default:break;
 		}

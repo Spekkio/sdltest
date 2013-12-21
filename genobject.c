@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
-
 void makeFloor(const float size)
 {
   const float alpha = 0.3;

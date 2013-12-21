@@ -1,8 +1,8 @@
 target: sdltest
 
-OPTS=-g -pedantic -Wall -Wextra -Werror
-OBJS=obj/mainloop.o obj/gl.o obj/genobject.o obj/ode.o
-LINK=`pkg-config --libs sdl` `pkg-config --libs ode` -lGL -lGLU 
+OPTS=-D_GNU_SOURCE -std=c99 -g -pedantic -Wall -Wextra -Werror
+OBJS=obj/mainloop.o obj/gl.o obj/genobject.o obj/ode.o obj/shaders.o
+LINK=`pkg-config --libs sdl` `pkg-config --libs ode`  -lGL -lGLEW -lGLU
 #-lX11 -lpng
 CFLAGS=`pkg-config --cflags sdl` `pkg-config --cflags ode`
 NEED=defines.h
@@ -29,6 +29,11 @@ obj/ode.o: ode.c ode.h $(NEED)
 	mkdir -p obj/
 	gcc $(OPTS) `pkg-config --cflags ode` -c ode.c
 	mv ode.o obj/
+
+obj/shaders.o: shaders.c shaders.h $(NEED)
+	mkdir -p obj/
+	gcc $(OPTS) -c shaders.c
+	mv shaders.o obj/
 
 clean:
 	rm -rf *~ sdltest *.o obj/ \#*\#
