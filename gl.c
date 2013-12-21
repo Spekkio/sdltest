@@ -42,11 +42,11 @@ void resetCam()
   glTranslatef(x_position, 0.0, y_position);
 }
 
-void display(void)
+void move_calcs(void)
 {
   float speed;
 
-  speed=1.0;
+  speed=3.75/(RDELAY);
 
   /*do some movement calculations, based on what buttons are pressed down*/
 
@@ -60,12 +60,12 @@ void display(void)
   /*if((((move_flags&FORWARD)) ^ ((move_flags&BACK))) & 1) {*/
 
   if(move_flags&FORWARD)  {
-    y_position+=cos((xd/360.0)*2.0*3.14)*WALK_SPEED; /*forward*/
-    x_position-=sin((xd/360.0)*2.0*3.14)*WALK_SPEED; /*strafe*/
+    y_position+=speed*cos((xd/360.0)*2.0*3.14)*WALK_SPEED; /*forward*/
+    x_position-=speed*sin((xd/360.0)*2.0*3.14)*WALK_SPEED; /*strafe*/
   }
   if(move_flags&BACK) {
-    y_position+=-cos((xd/360.0)*2.0*3.14)*WALK_SPEED; /*forward*/
-    x_position-=-sin((xd/360.0)*2.0*3.14)*WALK_SPEED; /*strafe*/
+    y_position+=-speed*cos((xd/360.0)*2.0*3.14)*WALK_SPEED; /*forward*/
+    x_position-=-speed*sin((xd/360.0)*2.0*3.14)*WALK_SPEED; /*strafe*/
   }
   
   /*xor, didn't work*/
@@ -74,7 +74,7 @@ void display(void)
   if(move_flags&RIGHT) {
 
     if((move_flags&FORWARD) || (move_flags&BACK)) {
-      speed=0.5; /*if moving diagonal*/
+      speed/=2.0; /*if moving diagonal*/
     }
 
     y_position+=speed*cos(((xd+90.0)/360.0)*2.0*3.14)*WALK_SPEED;
@@ -83,17 +83,19 @@ void display(void)
   if(move_flags&LEFT) {
 
     if((move_flags&FORWARD) || (move_flags&BACK)) {
-      speed=0.5; /*if moving diagonal*/
+      speed/=2.0; /*if moving diagonal*/
     }
 
     y_position+=-speed*cos(((xd+90.0)/360.0)*2.0*3.14)*WALK_SPEED;
     x_position-=-speed*sin(((xd+90.0)/360.0)*2.0*3.14)*WALK_SPEED;
   }
+}
 
+void display(void)
+{
   /*
   printf ("xv: %.4f, yv: %.4f, xpos: %.4f, ypos: %.4f\n",xd,yd,x_position,y_position);
   */
-  
 
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 

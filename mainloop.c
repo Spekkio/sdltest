@@ -1,6 +1,7 @@
 #include <SDL/SDL.h>
 #include <ode/ode.h>
 
+#include "defines.h"
 #include "gl.h"
 #include "ode.h"
 #include "mainloop.h"
@@ -9,6 +10,7 @@ int mousex,mousey,forward,strafe;
 int jump;
 
 int move_flags;
+int ticks_flags;
 
 void mainLoop(void)
 {
@@ -20,10 +22,8 @@ void mainLoop(void)
 
   ticks=0;
   frames=0;
-  forward=0;
-  strafe=0;
-  jump=0;
 
+  ticks_flags=0;
   move_flags=0;
 
   while(running)
@@ -143,7 +143,10 @@ void mainLoop(void)
       */
 
       collect+=ticks;
-      if(collect>10) {
+      if(collect>RDELAY) {
+
+	move_calcs();
+
 	simLoop(0,collect/1000.0f);
 	collect=0;/*
 		    printf("%u %u %f\n",ticks,frames,FPS);*/
