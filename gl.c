@@ -34,9 +34,11 @@ void resetCam()
   glRotatef(yd, 1.0, 0.0, 0.0);
   glRotatef(xd, 0.0, 1.0, 0.0);
   glTranslatef(0.0, 0.0,-10.0);
-  if(move_flags|JUMP) {
+  
+  if(move_flags&JUMP) {
     glTranslatef(0.0,-5.0-(2.0),0.0);
-  }
+  } else glTranslatef(0.0,-5.0,0.0);
+  
   glTranslatef(x_position, 0.0, y_position);
 }
 
