@@ -1,3 +1,63 @@
+commit 2fffa5d9defc9cd53d2502ea4112d5212d6c808d
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 21:17:02 2014 +0100
+
+    pedantic and std=c99 flags set
+
+commit b568317d03c72574f905b1a23f39e448d85b36f1
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 21:16:31 2014 +0100
+
+    Uninitialized variables start and collect
+
+commit b761e3b0e01589964a06a9cd124d1a8d7675cf4e
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 21:03:16 2014 +0100
+
+    gl should be glu, glu also include -lGL
+
+commit b36509eaeebb3367ca9edbcb3ac0af962701c6f9
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 21:01:43 2014 +0100
+
+    Forgot to add glu and glew libraries, fixed
+
+commit 7f49f193827115f3ba91efcfd81ee12b1a195568
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 20:56:47 2014 +0100
+
+    AUTHORS information
+
+commit 369517c7785d70c0ddbb0b9f75033deb68f3cdc1
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 20:51:57 2014 +0100
+
+    clean.sh cleans all files that autogen.sh makes
+
+commit 91835b4dbee31a6a887a5266ef7df849438cdb95
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 20:49:45 2014 +0100
+
+    more ignore rules and also src files are under src/
+
+commit aee9b130716e659a5e5331e59d40de2fee7ccd77
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 20:44:30 2014 +0100
+
+    autogen.sh is executable
+
+commit 78e25166cc67150ede669c800dc778fbcad9fa1c
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 20:43:52 2014 +0100
+
+    autogen.sh
+
+commit 1c92c59707431ced58c07ceeb169cb7d87fffed4
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 20:42:52 2014 +0100
+
+    Trying to implement autoconf/automake enviroment
+
 commit 3458db1f62c530e054479c553ef808b4a5e75ff5
 Author: Spekkio <maxifoo@gmail.com>
 Date:   Sat Dec 21 12:19:44 2013 +0100
