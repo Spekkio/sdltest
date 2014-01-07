@@ -22,6 +22,8 @@ void mainLoop(void)
 
   ticks=0;
   frames=0;
+  start=0;
+  collect=0;
 
   ticks_flags=0;
   move_flags=0;
