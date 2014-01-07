@@ -1,0 +1,8 @@
+Authors of sdltest
+See also ChangeLog
+
+Author: Daniel H. aka Spekkio <maxifoo@gmail.com>
+
+Daniel H. designed and implemented sdltest
+Daniel H.:
+  entire files src/defines.h src/genobject.h src/gl.h src/mainloop.c src/ode.c src/shaders.c src/genobject.c src/gl.c src/main.c src/mainloop.h src/ode.h src/shaders.h
