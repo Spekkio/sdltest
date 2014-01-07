@@ -1,0 +1,41 @@
+commit 3458db1f62c530e054479c553ef808b4a5e75ff5
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Sat Dec 21 12:19:44 2013 +0100
+
+    Constant speed dependent on FPS
+
+commit 479e692e8ed823e066bea989629d33e2112a1686
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Sat Dec 21 11:33:59 2013 +0100
+
+    Jump bug
+
+commit 6329b325861bdac7bf07a9b24d0cff99057440c4
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Sat Dec 21 11:32:05 2013 +0100
+
+    Add Shaders and prepare to convert code to use newer OpenGL VBO methods for rendering. Also fixed bug that made lockups in movement calculations
+
+commit 61e5e1cb7da68b3e4d1138183aab05cf32f0b1a0
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Mon Dec 16 18:26:08 2013 +0100
+
+    Print available OpenGL version
+
+commit 33bfd06ef82bc285578e45b7bffef4ba0b60ee62
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Mon Dec 16 18:25:30 2013 +0100
+
+    Error handling in init sequence
+
+commit b4387b0bc59dae2fbd837cfc164392eb890e44da
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Mon Dec 16 18:00:02 2013 +0100
+
+    Simple jump
+
+commit 8fb9725008bd2398d50a98d4e6b32f660644c203
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Sun Dec 15 19:55:01 2013 +0100
+
+    first
