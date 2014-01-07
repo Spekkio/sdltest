@@ -1,7 +1,7 @@
 AUTOMAKE_OPTIONS = subdir-objects
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS}
-
-AM_CFLAGS = -std=c99 -pedantic -Wall -Wextra -Werror
+#-std=c99
+AM_CFLAGS = -pedantic -Wall -Wextra -Werror
 
 AM_CPPFLAGS=$(DEPS_CFLAGS)
 
