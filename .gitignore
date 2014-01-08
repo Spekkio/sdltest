@@ -26,3 +26,6 @@ sdltest
 mdate-sh
 texinfo.tex
 build
+*.info
+doc/stamp-vti
+doc/version.texi
