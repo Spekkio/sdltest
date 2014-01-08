@@ -1,2 +1,30 @@
+\input texinfo @c -*-texinfo-*-
+@c %**start of header
 @setfilename sdltest.info
+@settitle SDL/OpenGL Test Program
+@setchapternewpage odd
+@c %**end of header
+@headings double
+
 @include version.texi
+
+@dircategory Programming
+@direntry
+* sdltest: (sdltest). Prototyping OpenGL in SDL
+@end direntry
+
+@ifinfo
+This file documents sdltest.
+@end ifinfo
+
+@titlepage
+@sp 10
+@title SDLTest
+@subtitle Edition @value{EDITION}, @value{UPDATED}
+@subtitle $Id: autobook_97.html,v 1.7 2014/01/08 18:45:00 gvv Exp $
+@author Daniel H.
+@author @email{maxifoo@@gmail.com}
+
+@page
+@vskip 0pt plus 1filll
+@end titlepage
