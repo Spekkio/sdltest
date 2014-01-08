@@ -1,3 +1,15 @@
+commit e85886aa7d3d71505f39fa812b6b44040bf795ed
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 18:39:32 2014 +0100
+
+    Documentation test with texinfo
+
+commit 26b22385940839e679d65b4897948f67390f2696
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 15:00:07 2014 +0100
+
+    ChangeLog
+
 commit 2a64ee47eb478d4359762af875e38f72de8ad607
 Author: Spekkio <maxifoo@gmail.com>
 Date:   Wed Jan 8 14:59:39 2014 +0100
