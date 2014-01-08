@@ -1,3 +1,33 @@
+commit ea7fc998a3ff11a2a17a96050fe8132fdd06bc80
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 18:53:03 2014 +0100
+
+    More info in doc
+
+commit 7ff30a9c055c2013eb550f79385e63117fa27866
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 18:44:41 2014 +0100
+
+    Better clean rules
+
+commit b0e6defb24b42e0255dd75045fc21434c198b0cd
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 18:43:30 2014 +0100
+
+    better clean rules
+
+commit f3a979c54f8ac41269b7c2d7c9bd31797cedb16b
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 18:41:20 2014 +0100
+
+    ignore rules
+
+commit dfabe9bb4029d3fe72fa318be7b715669f397b72
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 18:39:53 2014 +0100
+
+    ChangeLog
+
 commit e85886aa7d3d71505f39fa812b6b44040bf795ed
 Author: Spekkio <maxifoo@gmail.com>
 Date:   Wed Jan 8 18:39:32 2014 +0100
