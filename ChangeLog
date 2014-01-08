@@ -1,3 +1,21 @@
+commit 2a64ee47eb478d4359762af875e38f72de8ad607
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 14:59:39 2014 +0100
+
+    Include config.h and show some info
+
+commit d130ee692840bd05ffc342e24df8c9a270a71cb7
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 23:40:40 2014 +0100
+
+    deleted out.txt
+
+commit cd0ce26d92beccab40378e6439ae266a6485e099
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Tue Jan 7 23:37:10 2014 +0100
+
+    ChangeLog
+
 commit 5262470a304a8f7a5b24ba00ccb59810e2eee1bd
 Author: Spekkio <maxifoo@gmail.com>
 Date:   Tue Jan 7 23:36:53 2014 +0100
