@@ -1,0 +1,2 @@
+@setfilename sdltest.info
+@include version.texi

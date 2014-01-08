@@ -23,4 +23,6 @@ stamp-h1
 *.txt
 sound/
 sdltest
-
+mdate-sh
+texinfo.tex
+build

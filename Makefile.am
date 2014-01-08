@@ -10,4 +10,6 @@ sdltest_SOURCES = src/ode.c src/main.c src/mainloop.c src/shaders.c src/genobjec
 
 sdltest_LDADD = $(DEPS_LIBS)
 
+info_TEXINFOS = doc/sdltest.texi
+
 dist_noinst_SCRIPTS = autogen.sh
