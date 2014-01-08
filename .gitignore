@@ -29,3 +29,8 @@ build
 *.info
 doc/stamp-vti
 doc/version.texi
+compile
+config.guess
+config.sub
+ltmain.sh
+m4/*

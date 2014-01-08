@@ -5,3 +5,4 @@
 #&& autoconf
 
 autoreconf -f -i
+# -I m4
