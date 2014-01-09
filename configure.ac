@@ -29,10 +29,13 @@ AM_PROG_CC_C_O
 #AC_TYPE_UINT8_T
 #AC_C_VOLATILE
 #AC_CHECK_TYPES([ptrdiff_t])
-PKG_CHECK_MODULES([DEPS], [sdl >= 1.2.14 ode >= 0.11.1 glu >= 8.0.4 glew >= 1.7.0])
+PKG_CHECK_MODULES([DEPS], [sdl >= 1.2.14 ode >= 0.11.1 glu >= 8.0.4 glew >= 1.7.0 lua5.2 >= 5.2])
 AC_HEADER_STDC
 AC_HEADER_STDBOOL
 AC_C_CONST
+#AC_CHECK_HEADER(lua.h)
+#AC_CHECK_HEADER(lauxlib.h)
+#AC_CHECK_HEADER(lualib.h)
 AC_CHECK_HEADER(GL/gl.h)
 AC_CHECK_HEADER(GL/glew.h)
 AC_CHECK_HEADER(GL/glu.h)
