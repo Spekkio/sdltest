@@ -1,3 +1,33 @@
+commit cc6b4d7d8fe1cbdb5874483f2618df73b39325ff
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 15 16:03:31 2014 +0100
+
+    Prepare for LUA config files.
+
+commit 5d8b070c40370eef457cfe366117e1ee0d228694
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 15 16:02:41 2014 +0100
+
+    Added and changed package url.
+
+commit aac37ab595b646c8a0f6a7b004ff464d94f85b14
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Thu Jan 9 15:20:42 2014 +0100
+
+    Prepare for LUA configuration files instead of compiled in defines.h
+
+commit ffad773fc52432fb2b118c1b7fb026e425e18613
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 19:48:12 2014 +0100
+
+    Trying to implement doxygen, failed
+
+commit 6e914312bc9cf7fc5b93acd837bb5c2dab9609ad
+Author: Spekkio <maxifoo@gmail.com>
+Date:   Wed Jan 8 18:53:22 2014 +0100
+
+    ChangeLog
+
 commit ea7fc998a3ff11a2a17a96050fe8132fdd06bc80
 Author: Spekkio <maxifoo@gmail.com>
 Date:   Wed Jan 8 18:53:03 2014 +0100
