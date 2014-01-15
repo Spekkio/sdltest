@@ -1,4 +1,4 @@
-AC_INIT([SDL/OpenGL Test Program], [0.1], [maxifoo@gmail.com], [sdltest], [https://github.com/Spekkio])
+AC_INIT([SDL/OpenGL Test Program], [0.1], [maxifoo@gmail.com], [sdltest], [https://github.com/Spekkio/sdltest])
 AC_PREREQ([2.59])
 AM_INIT_AUTOMAKE([1.10 -Wall no-define])
 AC_CONFIG_HEADERS([config.h])

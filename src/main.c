@@ -31,6 +31,7 @@ char readParams(const int argc, char ** argv)
 	{
 	  printf("\nA simple program for testing some OpenGL in SDL\n");
 	  printf("\nReport bugs to: %s.\n",PACKAGE_BUGREPORT);
+	  printf("Package URL: %s\n",PACKAGE_URL);
 	  printf("Also see http://www.spekkio.se/ for my Public PGP key.\n");
 	  printf("\n");
 	  return 1;
