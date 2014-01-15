@@ -2,7 +2,13 @@
 #include <lauxlib.h>
 #include <lualib.h>
 
-/*#include "config.h"*/
+double RADIUS;
+double MOUSEX_SPEED;
+double MOUSEY_SPEED;
+double WALK_SPEED;
+
+/*msecs to next simulation*/
+unsigned int RDELAY;
 
 int load_config(char *filename)
 {
@@ -35,10 +41,11 @@ int load_config(char *filename)
   if(!lua_isnumber(L,-1))
     printf("`rdelay` should be a number\n");
 
-  /*
-  *width = (int)lua_tonumber(L, -2);
-  *height = (int)lua_tonumber(L, -1);
-  */
+  RADIUS = (int)lua_tonumber(L, -5);
+  MOUSEX_SPEED = (int)lua_tonumber(L, -4);
+  MOUSEY_SPEED = (int)lua_tonumber(L, -3);
+  WALK_SPEED = (int)lua_tonumber(L, -2);
+  RDELAY = (int)lua_tonumber(L, -1);
 
   lua_close(L);
   return 0;

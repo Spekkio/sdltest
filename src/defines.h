@@ -8,3 +8,12 @@
 
 #define BITSET(x,b) x|=b
 #define BITCLR(x,b) x&=0xFFFFFFFF^b
+
+/*
+extern double RADIUS;
+extern double MOUSEX_SPEED;
+extern double MOUSEY_SPEED;
+extern double WALK_SPEED;
+
+extern unsigned int RDELAY;
+*/
