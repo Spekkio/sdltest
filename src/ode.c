@@ -37,14 +37,14 @@ void glODEMultMatrixd(const dReal pos[3], const dReal R[12])
   glMultMatrixd (matrix);
 }
 
-static void nearCallback(void *data, dGeomID o1, dGeomID o2)
+static void nearCallback(void *data __attribute__((__unused__)), dGeomID o1, dGeomID o2)
 {
   dBodyID b1 = dGeomGetBody(o1);
   dBodyID b2 = dGeomGetBody(o2);
   dContact contact;
   int numc;
 
-  data=data;
+  /*data=data;*/
 
   contact.surface.mode = dContactBounce | dContactSoftCFM | dContactApprox1;
   /* friction parameter */
@@ -64,10 +64,10 @@ static void nearCallback(void *data, dGeomID o1, dGeomID o2)
   }
 }
 
-void simLoop(int pause, dReal step)
+void simLoop(int pause __attribute__((__unused__)), dReal step)
 {
   /*static double time=0.0;*/
-  pause=pause;
+  /*pause=pause;*/
   dSpaceCollide(space,0,&nearCallback);
   dWorldStep(world,step);
   dJointGroupEmpty(contactgroup);

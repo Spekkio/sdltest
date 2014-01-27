@@ -38,7 +38,6 @@ void mainLoop(void)
       if(count>1000.0)
 	{
 	  FPS=(frames)/*/(count/1000.0)*/;
-	  FPS=FPS;
 	  count=0;
 	  frames=0;
 	}
