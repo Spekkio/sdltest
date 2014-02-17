@@ -18,7 +18,7 @@ void mainLoop(void)
   Uint32 start;
   Uint32 ticks,gticks,frames,count;
   int running=1;
-  float FPS,collect;
+  float collect;
 
   ticks=0;
   frames=0;
@@ -37,7 +37,8 @@ void mainLoop(void)
 
       if(count>1000.0)
 	{
-	  FPS=(frames)/*/(count/1000.0)*/;
+	  /*FPS=(frames);*/
+	  /*/(count/1000.0)*/
 	  count=0;
 	  frames=0;
 	}
