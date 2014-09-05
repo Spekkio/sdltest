@@ -4,5 +4,5 @@
 #&& automake --add-missing \
 #&& autoconf
 
-autoreconf -f -i
+autoreconf -f -i -v
 # -I m4
