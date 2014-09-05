@@ -5,7 +5,7 @@
 
 #include "defines.h"
 
-static dWorldID world;
+static dWorldID world; /*!< World ID */
 static dSpaceID space;
 static dBodyID body, body2;
 static dGeomID geom, geom2;
@@ -16,6 +16,16 @@ static dJointGroupID contactgroup;
 const dReal *pos,*pos2, *R1, *R2;
 static dGeomID box1, box2, box3, box4;
 
+/**
+ * This function converts ODE position array
+ * and rotation matrix into an OpenGL matrix.
+ * The function the runs glMultMatrixd()
+ *
+ * @fn void glODEMultMatrixd(const dReal pos[3], const dReal R[12])
+ * @brief Convert routine for matrices.
+ * @param pos is the position array from ODE
+ * @param R is the rotation matrix from ODE
+ */
 void glODEMultMatrixd(const dReal pos[3], const dReal R[12])
 {
   GLdouble matrix[16];
@@ -66,6 +76,14 @@ static void nearCallback(void *data __attribute__((__unused__)), dGeomID o1, dGe
   }
 }
 
+/**
+ * Runs one simulation step in ODE, and checks for collisions.
+ * Also gets and stores positions for bodies.
+ *
+ * @brief Run one simulation step in ODE
+ * @param pause is unused
+ * @param step is the time to simulate in ms
+ */
 void simLoop(int pause __attribute__((__unused__)), dReal step)
 {
   /*static double time=0.0;*/
@@ -89,6 +107,9 @@ void simLoop(int pause __attribute__((__unused__)), dReal step)
   */
 }
 
+/**
+ * Initialize routine for ODE.
+ */
 void initODE(void)
 {
   dInitODE();

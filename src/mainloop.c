@@ -11,9 +11,21 @@
 int mousex,mousey,forward,strafe;
 int jump;
 
+/**
+ * contains information on how to move on the screen.
+ * it can contain the values defined below
+ * @see JUMP
+ * @see FORWARD
+ * @see BACK
+ * @see RIGHT
+ * @see LEFT
+ */
 int move_flags;
-int ticks_flags;
+int ticks_flags; /**< This seems to be unused */
 
+/**
+ * The main loop, this is were the program continusly run
+ */
 void mainLoop(void)
 {
   SDL_Event event;
@@ -26,7 +38,6 @@ void mainLoop(void)
   frames=0;
   start=0;
   collect=0;
-
   ticks_flags=0;
   move_flags=0;
 
