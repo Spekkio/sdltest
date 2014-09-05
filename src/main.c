@@ -1,3 +1,5 @@
+/*! \file main.c */
+
 #include <SDL/SDL.h>
 #include <ode/ode.h>
 #include <config.h>
@@ -6,8 +8,10 @@
 #include "gl.h"
 #include "ode.h"
 
-const char version[] = "1.0";
-
+/**
+ * A function that reads the input
+ * parameters from the command line
+ */
 char readParams(const int argc, char ** argv)
 {
   if(argc>1)
@@ -40,6 +44,12 @@ char readParams(const int argc, char ** argv)
     }
   return 0;
 }
+
+
+
+/**
+ * The main function
+ */
 
 int main(int argc, char ** argv)
 {

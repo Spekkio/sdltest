@@ -1,3 +1,5 @@
+/*! \file mainloop.c */
+
 #include <SDL/SDL.h>
 #include <ode/ode.h>
 

@@ -1,5 +1,6 @@
+/*! \file gl.c */
+
 #include <GL/glew.h>
-/*#include <GL/gl.h>*/
 #include <GL/glu.h>
 #include <ode/ode.h>
 
@@ -16,13 +17,13 @@ GLuint sphere, tfloor;
 
 float xd, yd;
 float x_position;
-float y_position;
+float y_position; /*!< y_pos    */
 
 typedef struct vec3{
-  float x;
-  float y;
-  float z;
-}vec3;
+  float x; /*!< x    */
+  float y; /*!< y    */
+  float z; /*!< z    */
+}vec3;     /*!< vec3 */
 
 struct vec3 vtest[3];
 

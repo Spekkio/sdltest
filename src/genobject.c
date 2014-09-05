@@ -1,3 +1,5 @@
+/*! \file genobject.c */
+
 #include <GL/gl.h>
 #include <math.h>
 #include <stdlib.h>
