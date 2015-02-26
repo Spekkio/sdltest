@@ -13,7 +13,7 @@
 
 const char * oglVersion;
 
-GLuint sphere, tfloor;
+GLuint sphere, tfloor, suzanne;
 
 float xd, yd;
 float x_position;
@@ -116,6 +116,8 @@ void display(void)
   resetCam();
   /*Rotate, move and display object*/
   glCallList(tfloor);
+
+  glCallList(suzanne);
 
 }
 
@@ -272,6 +274,12 @@ int initGL(void)
   tfloor = glGenLists(1);
   glNewList(tfloor, GL_COMPILE);
   makeFloor(2.0);
+  glEndList();
+
+  /*Suzanne from Blender import*/
+  suzanne = glGenLists(1);
+  glNewList(suzanne, GL_COMPILE);
+  Suzanne();
   glEndList();
 
   /*VBO Test*/
